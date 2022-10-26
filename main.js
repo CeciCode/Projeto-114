@@ -1,5 +1,7 @@
+noseX= 0;
+noseY= 0;
 function preload() {
-
+    load= loadImage("image.png");
 }
 function setup() {
     canvas= createCanvas(400, 400);
@@ -21,7 +23,8 @@ function gotPoses(results) {
     }
 }
 function draw() {
-
+    image(video, 0, 0, 300, 300);
+    image(load, noseX, noseY, 30, 30);
 }
 function snap() {
     save("lip.png");
